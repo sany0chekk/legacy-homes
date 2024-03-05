@@ -68,3 +68,187 @@ $(document).on("click", ".header-burger-open", function () {
 $(document).on("click", ".header-burger-close", function () {
   burgerTimeline.reverse();
 });
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.fromTo(
+  ".header-logo",
+  {
+    opacity: 0,
+    x: -50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".header-logo",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".header-burger-open",
+  {
+    opacity: 0,
+    x: 50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".header-burger-open",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".hero-content",
+  {
+    opacity: 0,
+    y: 50,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".hero-content",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".hero-title span",
+  {
+    opacity: 0,
+    x: -100,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1.5,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".hero-title span",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".hero-form-wrap",
+  {
+    opacity: 0,
+    x: 100,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    stagger: 0.2,
+    scrollTrigger: {
+      trigger: ".hero-form",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".hero-form-btn",
+  {
+    opacity: 0,
+    x: 20,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".hero-form-btn",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".hero-img-wrap",
+  {
+    opacity: 0,
+    y: 50,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".hero-img-wrap",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".services-title",
+  {
+    opacity: 0,
+    y: -20,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".services-title",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".services-descr",
+  {
+    opacity: 0,
+    y: 20,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".services-descr",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".services-item",
+  {
+    opacity: 0,
+    x: 100,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".services-list",
+      start: "top 80%",
+    },
+  }
+);

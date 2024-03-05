@@ -1,0 +1,107 @@
+.hero {
+  padding-top: 54px;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-content {
+    z-index: 20;
+  }
+
+  &-title {
+    font-family: $secondFont;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 1.08;
+
+    margin-bottom: 21px;
+
+    & span {
+      font-family: $mainFont;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+  }
+
+  &-descr {
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 1.64;
+
+    margin-bottom: 43px;
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: $lightColor;
+    box-shadow: 0 8px 28px 0 rgba(0, 0, 0, 0.12);
+    padding: 16px 25px;
+
+    &-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-label {
+      font-weight: 300;
+      font-size: 14px;
+
+      margin-bottom: 5px;
+    }
+
+    &-input {
+      outline: none;
+      font-weight: 700;
+      font-size: 17px;
+      line-height: 1.2;
+      border: 1px solid #1c1c1c3b;
+
+      transition: border-color 0.3s ease-in-out;
+
+      padding: 10px;
+
+      &:focus {
+        border-color: $darkColor;
+      }
+    }
+
+    &-btn {
+      background-color: $darkColor;
+
+      padding: 24px;
+      & svg {
+        stroke: $lightColor;
+      }
+    }
+  }
+
+  &-img-wrap {
+    position: relative;
+    z-index: 2;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      background-color: $darkColor;
+      border-radius: 50%;
+    }
+
+    &::before {
+      top: 20%;
+      right: -15px;
+    }
+
+    &::after {
+      z-index: -1;
+      bottom: 20%;
+      left: -15px;
+    }
+  }
+}
