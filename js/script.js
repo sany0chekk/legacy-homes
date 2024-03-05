@@ -4,7 +4,7 @@ const burgerTimeline = gsap.timeline({ paused: true });
 // Define the animation for opening the header burger
 burgerTimeline
   .to(".header-burger", {
-    duration: 1,
+    duration: 0.4,
     autoAlpha: 1,
     ease: "power2.inOut",
     visibility: "visible",
