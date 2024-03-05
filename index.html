@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+      integrity="sha512-4xo8blKMVCiXpTaLzQSLSw3KFOVPWhm/TRtuPVc4WG6kUgjH6J03IBuG7JZPkcWMxJ5huwaBpOpnwYElP/m6wg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/styles.min.css" />
+    <title>Legacy House</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container header-container">
+          <a href="" class="header-logo">
+            <img
+              srcset="./images/logo-min.png 1x, ./images/logo-2x-min.png 2x"
+              src="./images/logo-min.png"
+              alt="Logotype"
+            />
+          </a>
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li class="header-nav-item">
+                <a href="#!" class="header-nav-link"></a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#!" class="header-nav-link"></a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#!" class="header-nav-link"></a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#!" class="header-nav-link"></a>
+              </li>
+              <li class="header-nav-item">
+                <a href="#!" class="header-nav-link"></a>
+              </li>
+            </ul>
+          </nav>
+          <div class="header-auth">
+            <button type="button" class="header-auth-login"></button>
+            <button type="button" class="header-auth-reg"></button>
+          </div>
+          <button type="button" class="header-burger-open">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+        <div class="header-burger">
+          <button class="header-burger-close">
+            <svg width="25" height="25">
+              <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+          <ul class="header-burger-list">
+            <li class="header-burger-item">
+              <a href="#!" class="header-burger-link">Home</a>
+            </li>
+            <li class="header-burger-item">
+              <a href="#!" class="header-burger-link">Services</a>
+            </li>
+            <li class="header-burger-item">
+              <a href="#!" class="header-burger-link">Properties</a>
+            </li>
+            <li class="header-burger-item">
+              <a href="#!" class="header-burger-link">About Us</a>
+            </li>
+            <li class="header-burger-item">
+              <a href="#!" class="header-burger-link">Contact Us</a>
+            </li>
+          </ul>
+          <div class="header-burger-auth">
+            <button
+              type="button"
+              class="header-burger-auth-btn header-burger-auth-btn"
+            >
+              Sign In
+            </button>
+            <button
+              type="button"
+              class="header-burger-auth-btn header-burger-auth-btn--dark"
+            >
+              Sing Up
+            </button>
+          </div>
+        </div>
+      </header>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
