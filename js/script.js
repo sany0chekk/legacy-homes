@@ -69,7 +69,7 @@ $(document).on("click", ".header-burger-close", function () {
   burgerTimeline.reverse();
 });
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, CSSRulePlugin);
 
 gsap.fromTo(
   ".header-logo",
@@ -379,3 +379,88 @@ gsap.fromTo(
     },
   }
 );
+
+gsap.fromTo(
+  ".benefits-title",
+  {
+    opacity: 0,
+    y: -50,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".benefits-title",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".benefits-descr",
+  {
+    opacity: 0,
+    y: 50,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".benefits-descr",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".benefits-item",
+  {
+    opacity: 0,
+    x: 50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".benefits-item",
+      start: "top 80%",
+    },
+  }
+);
+
+// Створюємо анімацію з допомогою gsap.to()
+const tween = gsap.to(CSSRulePlugin.getRule(".benefits-item::after"), {
+  width: "100%", // кінцеве значення властивості width
+  ease: "power2.inOut", // функція пом'якшення
+  duration: 1.5,
+});
+
+// Створюємо тригер ScrollTrigger
+ScrollTrigger.create({
+  trigger: ".benefits-item-descr", // тригер сцени
+  start: "top bottom", // початок тригеру
+  end: "bottom top", // кінець тригеру
+  animation: tween, // анімація, яка запускається при тригері
+  once: true, // вмикання/вимкнення запуску анімації лише один раз
+});
+
+const tweenSecond = gsap.to(CSSRulePlugin.getRule(".benefits-list::after"), {
+  height: "100%", // кінцеве значення властивості width
+  ease: "power2.inOut", // функція пом'якшення
+  duration: 1.5,
+});
+
+// Створюємо тригер ScrollTrigger
+ScrollTrigger.create({
+  trigger: ".benefits-list", // тригер сцени
+  start: "top bottom", // початок тригеру
+  end: "bottom top", // кінець тригеру
+  animation: tweenSecond, // анімація, яка запускається при тригері
+  once: true, // вмикання/вимкнення запуску анімації лише один раз
+});
