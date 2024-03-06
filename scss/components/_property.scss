@@ -1,0 +1,90 @@
+.property {
+  padding-top: 100px;
+
+  &-descr {
+    margin-bottom: 22px;
+  }
+
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+  }
+
+  &-item {
+    &-img {
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+    }
+
+    &-content {
+      padding: 12px 23px 15px;
+      border: 1px solid $darkColor;
+      border-top: none;
+    }
+
+    &-descr {
+      font-weight: 500;
+      font-size: 18px;
+
+      margin-bottom: 15px;
+    }
+
+    &-location {
+      font-weight: 500;
+      font-size: 16px;
+
+      display: flex;
+      align-items: center;
+      gap: 5px;
+
+      margin-bottom: 15px;
+
+      & svg {
+        fill: none;
+        stroke: $darkColor;
+      }
+    }
+
+    &-price {
+      font-weight: 700;
+      font-size: 16px;
+
+      margin-bottom: 15px;
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      margin-bottom: 16px;
+
+      &-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      &-descr,
+      &-number {
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 0.8;
+      }
+    }
+
+    &-btn {
+      font-weight: 300;
+      font-size: 14px;
+      text-transform: uppercase;
+      color: $lightColor;
+
+      background-color: $darkColor;
+
+      width: 100%;
+      padding: 20px;
+    }
+  }
+}

@@ -252,3 +252,130 @@ gsap.fromTo(
     },
   }
 );
+
+gsap.fromTo(
+  ".about-title",
+  {
+    opacity: 0,
+    x: 50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".about-title",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".about-descr",
+  {
+    opacity: 0,
+    x: -50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".about-descr",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".about-btn",
+  {
+    opacity: 0,
+    x: 50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".about-btn",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".about-img-wrap",
+  {
+    opacity: 0,
+    x: -50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".about-img-wrap",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".property-item",
+  {
+    opacity: 0,
+    x: -100,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".property-list",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".property-title",
+  {
+    opacity: 0,
+    x: -50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".property-title",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".property-descr",
+  {
+    opacity: 0,
+    x: 50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".property-descr",
+      start: "top 80%",
+    },
+  }
+);
