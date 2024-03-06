@@ -1,3 +1,49 @@
+const swiper = new Swiper(".swiper", {
+  // Optional parameters
+  direction: "horizontal",
+  loop: true,
+  centeredSlides: true,
+
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+
+  spaceBetween: 20,
+
+  on: {
+    slideChangeTransitionStart: function () {
+      // Знаходимо всі елементи team-item-content
+      const contents = document.querySelectorAll(".team-item-content");
+
+      // Проходимо по всім елементам і видаляємо клас active
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
+
+      // Знаходимо активний слайд
+      const activeSlide = this.slides[this.activeIndex];
+
+      // Знаходимо елемент team-item-content в активному слайді
+      const activeContent = activeSlide.querySelector(".team-item-content");
+
+      // Додаємо клас active до елементу team-item-content в активному слайді
+      activeContent.classList.add("active");
+    },
+  },
+});
+
 // Create a GSAP timeline for the header burger animation
 const burgerTimeline = gsap.timeline({ paused: true });
 
@@ -464,3 +510,57 @@ ScrollTrigger.create({
   animation: tweenSecond, // анімація, яка запускається при тригері
   once: true, // вмикання/вимкнення запуску анімації лише один раз
 });
+
+gsap.fromTo(
+  ".team-title",
+  {
+    opacity: 0,
+    x: -50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".team-title",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".team-descr",
+  {
+    opacity: 0,
+    x: 50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".team-descr",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".team-list",
+  {
+    opacity: 0,
+    y: 100,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".team-list",
+      start: "top 80%",
+    },
+  }
+);
