@@ -13,6 +13,13 @@
   }
 
   &-item {
+    @media screen and (min-width: 768px) {
+      width: calc((100% / 2) - 22px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: calc((100% / 3) - 44px);
+    }
     &-img {
       border-radius: 10px 10px 0 0;
       width: 100%;

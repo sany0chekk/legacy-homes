@@ -476,8 +476,63 @@ gsap.fromTo(
     x: 0,
     duration: 1,
     ease: "power3.out",
+    stagger: 0.3,
     scrollTrigger: {
       trigger: ".benefits-item",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".header-nav-item",
+  {
+    opacity: 0,
+    y: -20,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".header",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".header-auth-reg",
+  {
+    opacity: 0,
+    x: 50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".header",
+      start: "top 80%",
+    },
+  }
+);
+gsap.fromTo(
+  ".header-auth-login",
+  {
+    opacity: 0,
+    x: -50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".header",
       start: "top 80%",
     },
   }

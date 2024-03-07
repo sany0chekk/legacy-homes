@@ -1,13 +1,28 @@
 .hero {
   padding-top: 54px;
 
+  @media screen and (min-width: 1200px) {
+    padding-top: 34px;
+  }
+
   &-container {
     display: flex;
     flex-direction: column;
+    position: relative;
+
+    @media screen and (min-width: 1200px) {
+      flex-direction: row;
+      padding-top: 130px;
+      padding-bottom: 130px;
+    }
   }
 
   &-content {
     z-index: 20;
+
+    @media screen and (min-width: 1200px) {
+      max-width: 780px;
+    }
   }
 
   &-title {
@@ -23,6 +38,14 @@
       font-weight: 900;
       text-transform: uppercase;
     }
+
+    @media screen and (min-width: 768px) {
+      font-size: 52px;
+
+      & span {
+        font-size: 90px;
+      }
+    }
   }
 
   &-descr {
@@ -31,6 +54,10 @@
     line-height: 1.64;
 
     margin-bottom: 43px;
+
+    @media screen and (min-width: 1200px) {
+      max-width: 530px;
+    }
   }
 
   &-form {
@@ -41,6 +68,12 @@
     background-color: $lightColor;
     box-shadow: 0 8px 28px 0 rgba(0, 0, 0, 0.12);
     padding: 16px 25px;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
 
     &-wrap {
       display: flex;
@@ -68,6 +101,10 @@
       &:focus {
         border-color: $darkColor;
       }
+
+      @media screen and (min-width: 768px) {
+        max-width: 140px;
+      }
     }
 
     &-btn {
@@ -78,6 +115,10 @@
         stroke: $lightColor;
       }
     }
+  }
+
+  &-img {
+    width: 100%;
   }
 
   &-img-wrap {
@@ -92,17 +133,36 @@
       height: 40px;
       background-color: $darkColor;
       border-radius: 50%;
+
+      @media screen and (min-width: 768px) {
+        width: 88px;
+        height: 88px;
+      }
     }
 
     &::before {
       top: 20%;
       right: -15px;
+
+      @media screen and (min-width: 768px) {
+        right: -44px;
+      }
     }
 
     &::after {
       z-index: -1;
       bottom: 20%;
       left: -15px;
+
+      @media screen and (min-width: 768px) {
+        left: -44px;
+      }
+    }
+
+    @media screen and (min-width: 1200px) {
+      position: absolute;
+      top: 0;
+      right: 0;
     }
   }
 }

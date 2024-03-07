@@ -1,6 +1,11 @@
 .team {
   padding-top: 100px;
+  padding-bottom: 100px;
   overflow-x: auto;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 269px;
+  }
 
   &-descr {
     margin-bottom: 36px;
