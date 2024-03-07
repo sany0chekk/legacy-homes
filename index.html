@@ -71,19 +71,19 @@
           </button>
           <ul class="header-burger-list">
             <li class="header-burger-item">
-              <a href="#!" class="header-burger-link">Home</a>
+              <a href="./index.html" class="header-burger-link">Home</a>
             </li>
             <li class="header-burger-item">
-              <a href="#!" class="header-burger-link">Services</a>
+              <a href="#services" class="header-burger-link">Services</a>
             </li>
             <li class="header-burger-item">
-              <a href="#!" class="header-burger-link">Properties</a>
+              <a href="#properties" class="header-burger-link">Properties</a>
             </li>
             <li class="header-burger-item">
-              <a href="#!" class="header-burger-link">About Us</a>
+              <a href="#team" class="header-burger-link">About Us</a>
             </li>
             <li class="header-burger-item">
-              <a href="#!" class="header-burger-link">Contact Us</a>
+              <a href="#send" class="header-burger-link">Contact Us</a>
             </li>
           </ul>
           <div class="header-burger-auth">
@@ -176,7 +176,7 @@
             </div>
           </div>
         </section>
-        <section class="services">
+        <section id="services" class="services">
           <div class="container services-container">
             <h2 class="services-title main-title">Services</h2>
             <p class="services-descr main-descr">
@@ -282,7 +282,7 @@
             </div>
           </div>
         </section>
-        <section class="property">
+        <section id="properties" class="property">
           <div class="container property-container">
             <h2 class="property-title main-title">Property</h2>
             <p class="property-descr main-descr">
@@ -531,7 +531,7 @@
             </ul>
           </div>
         </section>
-        <section class="team">
+        <section id="team" class="team">
           <div class="container team-container">
             <h2 class="team-title main-title">client testimonials</h2>
             <p class="team-descr main-descr">
@@ -681,7 +681,127 @@
             </div>
           </div>
         </section>
+        <section id="send" class="send">
+          <div class="container send-container">
+            <div class="send-img-wrap">
+              <img
+                srcset="./images/flat-min.png 1x, ./images/flat-2x-min.png 2x"
+                src="./images/flat-min.png"
+                alt="Send Image"
+                class="send-img"
+              />
+            </div>
+            <div class="send-content">
+              <h2 class="send-title main-title">Get Our Monthly Newsletter</h2>
+              <p class="send-descr">
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book.
+              </p>
+              <form class="send-form">
+                <input
+                  type="email"
+                  class="send-form-input"
+                  placeholder="email@mail.com"
+                />
+                <button type="submit" class="send-form-btn">
+                  <svg width="36" height="36">
+                    <use href="./images/icons.svg#icon-send"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
       </main>
+      <footer class="footer">
+        <div class="container footer-container">
+          <div class="footer-wrap">
+            <a href="./index.html" class="footer-logo">
+              <img
+                srcset="
+                  ./images/logo-white-min.png    1x,
+                  ./images/logo-white-2x-min.png 2x
+                "
+                src="./images/logo-white-min.png"
+                alt="Logotype"
+                class="footer-logo-img"
+              />
+            </a>
+            <p class="footer-descr">
+              Lorem Ipsum is simply dummy text of the printing and typesetting
+              industry. Lorem Ipsum has been the industry's standard dummy text
+              ever since the 1500s, when an unknown printer took a galley of
+              type and scrambled it to make a type specimen book.
+            </p>
+            <ul class="footer-social">
+              <li class="footer-social-item">
+                <a href="#" class="footer-social-link">
+                  <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="#" class="footer-social-link">
+                  <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="#" class="footer-social-link">
+                  <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-youtube"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-social-item">
+                <a href="#" class="footer-social-link">
+                  <svg width="24" height="24">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-wrap footer-nav">
+            <h3 class="footer-wrap-title">About</h3>
+            <ul class="footer-wrap-list">
+              <li class="footer-wrap-item">
+                <a href="#" class="footer-wrap-link">Menu</a>
+              </li>
+              <li class="footer-wrap-item">
+                <a href="#" class="footer-wrap-link">Features</a>
+              </li>
+              <li class="footer-wrap-item">
+                <a href="#" class="footer-wrap-link">News & Blog</a>
+              </li>
+              <li class="footer-wrap-item">
+                <a href="#" class="footer-wrap-link">Help & Supports</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-wrap footer-nav">
+            <h3 class="footer-wrap-title">Company</h3>
+            <ul class="footer-wrap-list">
+              <li class="footer-wrap-item">
+                <a href="#" class="footer-wrap-link">How we work</a>
+              </li>
+              <li class="footer-wrap-item">
+                <a href="#" class="footer-wrap-link">Terms of service</a>
+              </li>
+              <li class="footer-wrap-item">
+                <a href="#" class="footer-wrap-link">Pricing</a>
+              </li>
+              <li class="footer-wrap-item">
+                <a href="#" class="footer-wrap-link">FAQ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

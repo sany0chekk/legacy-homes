@@ -1,0 +1,53 @@
+.send {
+  background-color: $darkColor;
+  padding: 90px 0;
+  position: relative;
+
+  &-title {
+    color: $lightColor;
+    text-align: left;
+  }
+
+  &-descr {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.6;
+    color: $lightColor;
+
+    margin-bottom: 26px;
+  }
+
+  &-form {
+    display: flex;
+    height: 75px;
+    border: 1px solid $lightColor;
+
+    &-input {
+      width: 100%;
+      height: 100%;
+
+      background-color: $greyColor;
+      color: $lightColor;
+
+      outline: none;
+      border: none;
+
+      padding: 0 26px;
+    }
+
+    &-btn {
+      height: 100%;
+      background-color: $lightColor;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 0 22px;
+
+      & svg {
+        fill: none;
+        stroke: $darkColor;
+      }
+    }
+  }
+}

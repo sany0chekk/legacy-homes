@@ -59,14 +59,17 @@ burgerTimeline
     onStart: function () {
       $(".header-burger").css("visibility", "visible");
       $(".header-burger").css("pointer-events", "auto");
+      $("body").css("overflow", "hidden");
     },
     onComplete: function () {
       $(".header-burger").css("visibility", "visible");
       $(".header-burger").css("pointer-events", "auto");
+      $("body").css("overflow", "hidden");
     },
     onReverseComplete: function () {
       $(".header-burger").css("visibility", "hidden");
       $(".header-burger").css("pointer-events", "none");
+      $("body").css("overflow", "auto");
     },
   })
   //   .addPause() // Add a pause before animating the child elements
@@ -560,6 +563,133 @@ gsap.fromTo(
     ease: "power3.out",
     scrollTrigger: {
       trigger: ".team-list",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".send-img-wrap",
+  {
+    opacity: 0,
+    y: -30,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".send-img-wrap",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".send-title",
+  {
+    opacity: 0,
+    y: -30,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".send-title",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".send-descr",
+  {
+    opacity: 0,
+    x: -30,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".send-descr",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".send-form",
+  {
+    opacity: 0,
+    x: 30,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".send-form",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".footer-logo",
+  {
+    opacity: 0,
+    y: -50,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".footer-logo",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".footer-descr",
+  {
+    opacity: 0,
+    x: -50,
+  },
+  {
+    opacity: 1,
+    x: 0,
+    duration: 1,
+    ease: "power3.out",
+    scrollTrigger: {
+      trigger: ".footer-descr",
+      start: "top 80%",
+    },
+  }
+);
+
+gsap.fromTo(
+  ".footer-social-item",
+  {
+    opacity: 0,
+    y: 20,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    duration: 1,
+    ease: "power3.out",
+    stagger: 0.3,
+    scrollTrigger: {
+      trigger: ".footer-descr",
       start: "top 80%",
     },
   }
