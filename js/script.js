@@ -44,6 +44,19 @@ const swiper = new Swiper(".swiper", {
   },
 });
 
+$('a[href^="#"]').click(function () {
+  var target = $(this.getAttribute("href"));
+  if (target.length) {
+    $("html, body").stop().animate(
+      {
+        scrollTop: target.offset().top,
+      },
+      1000
+    ); // тривалість анімації - 1000 мілісекунд (1 секунда)
+    return false;
+  }
+});
+
 // Create a GSAP timeline for the header burger animation
 const burgerTimeline = gsap.timeline({ paused: true });
 
@@ -108,6 +121,10 @@ burgerTimeline
     },
     "-=0.15" // Start the header-burger-auth-btn animation 0.15 seconds before the previous animation ends
   );
+
+$(".header-burger-link").click(function () {
+  burgerTimeline.reverse();
+});
 
 // Add click event listeners for opening and closing the header burger
 $(document).on("click", ".header-burger-open", function () {
